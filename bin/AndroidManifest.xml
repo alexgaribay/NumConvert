@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:myapp="http://schemas.android.com/apk/res/com.alexgaribay.numconvert"
+	package="com.alexgaribay.numconvert"
+	android:versionCode="11" android:versionName="1.2.0">
+	<supports-screens
+		android:smallScreens="true"
+		android:normalScreens="true"
+		android:largeScreens="true" />
+	<uses-sdk
+		android:minSdkVersion="10" />
+	<application
+		android:label="@string/app_name"
+		android:enabled="true" android:icon="@drawable/icon">
+		<activity
+			android:theme="@android:style/Theme.Black.NoTitleBar"
+			android:name=".NumConvert"
+			android:label="@string/app_name"
+			android:screenOrientation="portrait">
+			<intent-filter>
+				<action
+					android:name="android.intent.action.MAIN" />
+				<category
+					android:name="android.intent.category.LAUNCHER" />
+			</intent-filter>
+		</activity>
+	</application>
+</manifest> 

@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:myapp="http://schemas.android.com/apk/res/com.malloc.numconvert"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical">
+	<ScrollView
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="top"
+		android:layout_weight="1">
+		<RelativeLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical">
+			<TextView
+				android:id="@+id/blank"
+				android:layout_width="10dip"
+				android:layout_alignParentTop="true"
+				android:layout_alignParentRight="true"
+				android:layout_height="5dip" />
+			<TextView
+				android:id="@+id/label"
+				android:layout_width="256dip"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:textSize="12dip"
+				android:text="Number To Convert:" />
+			<TextView
+				android:id="@+id/entry"
+				android:layout_width="210dip"
+				android:layout_height="wrap_content"
+				android:textSize="20dip"
+				android:layout_below="@id/label" />
+			<TextView
+				android:id="@+id/result"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@id/entry"
+				android:textSize="12dip"
+				android:text="Resulting Number:" />
+			<TextView
+				android:id="@+id/result_box"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:textSize="20dip"
+				android:paddingBottom="5dip"
+				android:layout_below="@id/result" />
+			<Button
+				android:id="@+id/clear_button"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignParentRight="true"
+				android:layout_toRightOf="@id/label"
+				android:layout_below="@id/blank"
+				android:longClickable="true"
+				android:textSize="14dip"
+				android:text="Clear" />
+			<Button
+				android:id="@+id/seven"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@id/result_box"
+				android:paddingTop="5dip"
+				android:text="7" />
+			<Button
+				android:id="@+id/eight"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/seven"
+				android:layout_toRightOf="@id/seven"
+				android:text="8" />
+			<Button
+				android:id="@+id/nine"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/seven"
+				android:layout_toRightOf="@id/eight"
+				android:text="9" />
+			<Button
+				android:id="@+id/four"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@id/seven"
+				android:text="4" />
+			<Button
+				android:id="@+id/five"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/four"
+				android:layout_toRightOf="@id/four"
+				android:text="5" />
+			<Button
+				android:id="@+id/six"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/four"
+				android:layout_toRightOf="@id/five"
+				android:text="6" />
+			<Button
+				android:id="@+id/one"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@id/four"
+				android:text="1" />
+			<Button
+				android:id="@+id/two"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/one"
+				android:layout_toRightOf="@id/one"
+				android:text="2" />
+			<Button
+				android:id="@+id/three"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/one"
+				android:layout_toRightOf="@id/two"
+				android:text="3" />
+			<Button
+				android:id="@+id/zero"
+				android:layout_width="192dip"
+				android:layout_height="50dip"
+				android:layout_below="@id/two"
+				android:text="0" />
+			<Button
+				android:id="@+id/f"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_below="@id/result_box"
+				android:layout_alignTop="@id/seven"
+				android:layout_alignParentRight="true"
+				android:paddingRight="10dip"
+				android:text="F" />
+			<Button
+				android:id="@+id/e"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/f"
+				android:layout_toLeftOf="@id/f"
+				android:text="E" />
+			<Button
+				android:id="@+id/d"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_below="@id/f"
+				android:layout_alignTop="@id/four"
+				android:layout_alignParentRight="true"
+				android:paddingRight="10dip"
+				android:text="D" />
+			<Button
+				android:id="@+id/c"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_alignTop="@id/d"
+				android:layout_toLeftOf="@id/d"
+				android:text="C" />
+			<Button
+				android:id="@+id/b"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_below="@id/d"
+				android:layout_alignTop="@id/one"
+				android:layout_alignParentRight="true"
+				android:paddingRight="10dip"
+				android:text="B" />
+			<Button
+				android:id="@+id/a"
+				android:layout_width="64dip"
+				android:layout_height="50dip"
+				android:layout_below="@id/c"
+				android:layout_alignTop="@id/one"
+				android:layout_toLeftOf="@id/b"
+				android:text="A" />
+			<TextView
+				android:id="@+id/base"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/zero"
+				android:layout_alignParentLeft="true"
+				android:text="Base Number Type:" />
+			<RadioGroup
+				android:id="@+id/base_radio"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:layout_below="@id/base"
+				android:orientation="vertical">
+				<RadioButton
+					android:id="@+id/base_binary"
+					android:checked="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Binary" />
+				<RadioButton
+					android:id="@+id/base_octal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Octal" />
+				<RadioButton
+					android:id="@+id/base_decimal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Decimal" />
+				<RadioButton
+					android:id="@+id/base_hexadecimal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Hex" />
+			</RadioGroup>
+			<TextView
+				android:id="@+id/convert"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/zero"
+				android:layout_toRightOf="@id/base"
+				android:paddingLeft="20dip"
+				android:text="Convert To:" />
+			<RadioGroup
+				android:id="@+id/convert_radio"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/convert"
+				android:orientation="vertical"
+				android:layout_alignLeft="@id/convert"
+				android:paddingLeft="20dip">
+				<RadioButton
+					android:id="@+id/convert_binary"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Binary" />
+				<RadioButton
+					android:id="@+id/convert_octal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Octal" />
+				<RadioButton
+					android:id="@+id/convert_decimal"
+					android:checked="true"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Decimal" />
+				<RadioButton
+					android:id="@+id/convert_hexadecimal"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:textSize="14dip"
+					android:text="Hex" />
+			</RadioGroup>
+		</RelativeLayout>
+	</ScrollView>
+</LinearLayout>
+
