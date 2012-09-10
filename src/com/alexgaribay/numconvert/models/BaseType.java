@@ -19,6 +19,11 @@ public class BaseType
 		radix = baseTypeEnum.getValue();
 	}
 
+	public CharSequence convertToCharSequence(Long value)
+	{
+		return Long.toString(value, radix);
+	}
+	
 	public long convertToLong(CharSequence value)
 	{
 		return Long.parseLong(value.toString(), radix);
