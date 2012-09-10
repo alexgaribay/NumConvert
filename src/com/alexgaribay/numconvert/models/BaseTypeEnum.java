@@ -8,7 +8,7 @@ package com.alexgaribay.numconvert.models;
  */
 public enum BaseTypeEnum
 {
-	BINARY(1), OCTAL(8), DECIMAL(10), HEX(16);
+	BINARY(2), OCTAL(8), DECIMAL(10), HEX(16);
 
 	private int value;
 
