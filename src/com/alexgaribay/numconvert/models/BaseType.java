@@ -12,6 +12,12 @@ public class BaseType
 	private long maxValue;
 	private int radix;
 
+	/**
+	 * Constructs a BaseType based off the specified base type
+	 * 
+	 * @param baseTypeEnum
+	 *            Desired base type
+	 */
 	public BaseType(BaseTypeEnum baseTypeEnum)
 	{
 		this.baseTypeEnum = baseTypeEnum;
@@ -19,16 +25,36 @@ public class BaseType
 		radix = baseTypeEnum.getValue();
 	}
 
-	public CharSequence convertToCharSequence(Long value)
+	/**
+	 * Converts a value CharSequence form of the set base type
+	 * 
+	 * @param value
+	 *            Value to converted
+	 * @return CharSequence representation
+	 */
+	public CharSequence convertToCharSequence(long value)
 	{
-		return Long.toString(value, radix);
-	}
-	
-	public long convertToLong(CharSequence value)
-	{
-		return Long.parseLong(value.toString(), radix);
+		return (baseTypeEnum == BaseTypeEnum.HEX) ? Long.toString(value, radix)
+				.toUpperCase() : Long.toString(value, radix);
 	}
 
+	/**
+	 * Converts a CharSequence of the set base type to a decimal value of a long
+	 * 
+	 * @param sequence
+	 *            Sequence to be converted to a long
+	 * @return the long value equivalent
+	 */
+	public long convertToLong(CharSequence sequence)
+	{
+		return Long.parseLong(sequence.toString(), radix);
+	}
+
+	/**
+	 * Get the maximum value for the set base type
+	 * 
+	 * @return the maximum value
+	 */
 	public long getMaxValue()
 	{
 		return this.maxValue;

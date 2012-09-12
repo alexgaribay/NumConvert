@@ -31,12 +31,13 @@ public class Model
 	}
 
 	/**
-	 * Removes a CharSequence value equivalent to the max value of the current NumberType.
+	 * Removes a CharSequence value equivalent to the max value of the current
+	 * NumberType.
 	 * 
 	 * @param baseTypeEnum
 	 *            Current base type
 	 */
-	public void removeValue(BaseTypeEnum baseTypeEnum)
+	public void removeDigit(BaseTypeEnum baseTypeEnum)
 	{
 		BaseType base = new BaseType(baseTypeEnum);
 		_number = _number / base.getMaxValue();
@@ -50,9 +51,10 @@ public class Model
 	 * @param numberValue
 	 *            The value to be added
 	 */
-	public void addValue(BaseTypeEnum baseTypeEnum, CharSequence numberValue)
+	public void addDigit(BaseTypeEnum baseTypeEnum, CharSequence numberValue)
 	{
 		BaseType base = new BaseType(baseTypeEnum);
-		_number = _number * base.getMaxValue() + base.convertToLong(numberValue);
+		_number = _number * base.getMaxValue()
+				+ base.convertToLong(numberValue);
 	}
 }
